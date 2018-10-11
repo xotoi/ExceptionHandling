@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace StringParser
+namespace Tests
 {
     public class StringParserTest
     {
@@ -10,7 +10,7 @@ namespace StringParser
         {
             // Arrange
             // Act
-            var result = StringParser.ParseStringToInt("123456");
+            var result = StringParser.StringParser.ParseStringToInt("123456");
 
             // Assert
             Assert.Equal(123456, result);
@@ -26,7 +26,7 @@ namespace StringParser
             // Act
             // Assert
             Assert.Throws<ArgumentException>(
-                () => StringParser.ParseStringToInt(value));
+                () => StringParser.StringParser.ParseStringToInt(value));
         }
     }
 }
